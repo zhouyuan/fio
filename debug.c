@@ -20,7 +20,7 @@ void __dprint(int type, const char *str, ...)
 	log_err("%-5u ", (int) pid);
 
 	va_start(args, str);
-	log_valist(str, args);
+	log_valist_err(str, args);
 	va_end(args);
 }
 #endif

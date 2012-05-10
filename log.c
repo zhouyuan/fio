@@ -6,6 +6,22 @@
 
 #include "fio.h"
 
+int log_valist_err(const char *str, va_list args)
+{
+	char buffer[1024];
+	size_t len;
+
+	len = vsnprintf(buffer, sizeof(buffer), str, args);
+
+	if (log_syslog)
+		syslog(LOG_INFO, "%s", buffer);
+	else
+		len = fwrite(buffer, len, 1, f_err);
+
+	return len;
+}
+
+
 int log_valist(const char *str, va_list args)
 {
 	char buffer[1024];
