@@ -57,7 +57,7 @@ static int write_lat_log;
 
 static int prev_group_jobs;
 
-unsigned long fio_debug = 0;
+unsigned long fio_debug = 1 << FD_KAZBAR;
 unsigned int fio_debug_jobno = -1;
 unsigned int *fio_debug_jobp = NULL;
 
