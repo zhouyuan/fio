@@ -19,6 +19,7 @@ enum {
 	FD_PROFILE,
 	FD_TIME,
 	FD_NET,
+	FD_KAZBAR,
 	FD_DEBUG_MAX,
 };
 

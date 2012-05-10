@@ -1231,6 +1231,7 @@ struct debug_level debug_levels[] = {
 	{ .name	= "profile",	.shift = FD_PROFILE },
 	{ .name = "time",	.shift = FD_TIME },
 	{ .name = "net",	.shift = FD_NET },
+	{ .name = "kazbar",	.shift = FD_KAZBAR },
 	{ .name = NULL, },
 };
 

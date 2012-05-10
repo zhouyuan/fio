@@ -414,6 +414,7 @@ static void do_verify(struct thread_data *td)
 		if (runtime_exceeded(td, &td->tv_cache)) {
 			__update_tv_cache(td);
 			if (runtime_exceeded(td, &td->tv_cache)) {
+				dprint(FD_KAZBAR, "runtime exceeded: epoc %llu msec, start %llu msec\n", mtime_since_now(&td->epoch), mtime_since_now(&td->start));
 				td->terminate = 1;
 				break;
 			}
@@ -585,6 +586,7 @@ static void do_io(struct thread_data *td)
 		if (runtime_exceeded(td, &td->tv_cache)) {
 			__update_tv_cache(td);
 			if (runtime_exceeded(td, &td->tv_cache)) {
+				dprint(FD_KAZBAR, "runtime exceeded: epoc %llu msec, start %llu msec\n", mtime_since_now(&td->epoch), mtime_since_now(&td->start));
 				td->terminate = 1;
 				break;
 			}
