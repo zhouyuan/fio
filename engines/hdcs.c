@@ -381,7 +381,7 @@ static int fio_hdcs_setup(struct thread_data *td)
 		td->o.open_files++;
 	}
 	f = td->files[0];
-	f->real_file_size = 1073741824;
+	f->real_file_size = 107374182400;
 
 	/* disconnect, then we were only connected to determine
 	 * the size of the RBD.
